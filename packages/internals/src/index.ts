@@ -5,12 +5,10 @@ export {
   getRelativeSchemaPath,
   getSchema,
   getSchemaDir,
-  getSchemaDirSync,
   getSchemaPath,
   getSchemaPathFromPackageJson,
   getSchemaPathFromPackageJsonSync,
   getSchemaPathSync,
-  getSchemaSync,
 } from './cli/getSchema'
 export { getCLIPathHash, getProjectHash } from './cli/hashes'
 export { unknownCommand } from './cli/Help'
@@ -70,6 +68,7 @@ export { loadEnvFile } from './utils/loadEnvFile'
 export { mapObjectValues } from './utils/mapObjectValues'
 export { mapPreviewFeatures } from './utils/mapPreviewFeatures'
 export { maskSchema } from './utils/maskSchema'
+export { maxBy } from './utils/maxBy'
 export { missingGeneratorMessage } from './utils/missingGeneratorMessage'
 export { parseBinaryTargetsEnvValue, parseEnvValue } from './utils/parseEnvValue'
 export { pick } from './utils/pick'
