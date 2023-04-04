@@ -20,7 +20,7 @@ async function main() {
 
 async function run(benchmarks: string[]) {
   for (const location of benchmarks) {
-    await execa.command(`node -r esbuild-register ${location}`, {
+    await execa.command(`node --predictable -r esbuild-register ${location}`, {
       stdio: 'inherit',
     })
   }
