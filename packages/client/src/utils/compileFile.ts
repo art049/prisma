@@ -2,7 +2,8 @@ import execa from 'execa'
 import path from 'path'
 import ts, { createCompilerHost, createProgram, ModuleKind, ScriptTarget } from 'typescript'
 
-export function compileFile(filePath: string) {
+// eslint-disable-next-line @typescript-eslint/require-await
+export async function compileFile(filePath: string) {
   // await execa.node(path.resolve(__dirname, 'compilerWorker.js'), [filePath])
   const options = {
     module: ModuleKind.CommonJS,
