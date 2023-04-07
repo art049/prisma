@@ -94,7 +94,8 @@
       }
     },
     "patchedDependencies": {
-      "node-fetch@2.6.7": "patches/node-fetch@2.6.7.patch"
+      "node-fetch@2.6.7": "patches/node-fetch@2.6.7.patch",
+      "@codspeed/core@1.0.2": "patches/@codspeed__core@1.0.2.patch"
     }
   },
   "lint-staged": {

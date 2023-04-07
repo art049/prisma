@@ -1,6 +1,9 @@
 lockfileVersion: 5.4
 
 patchedDependencies:
+  '@codspeed/core@1.0.2':
+    hash: wjyxl5ieabzzlyhpytaak4knku
+    path: patches/@codspeed__core@1.0.2.patch
   node-fetch@2.6.7:
     hash: 3wcp6bao3dfksocwsfev5pt7km
     path: patches/node-fetch@2.6.7.patch
@@ -2217,17 +2220,18 @@ packages:
     peerDependencies:
       benchmark: ^2.1.0
     dependencies:
-      '@codspeed/core': 1.0.2
+      '@codspeed/core': 1.0.2_wjyxl5ieabzzlyhpytaak4knku
       benchmark: 2.1.4
       find-up: 6.3.0
       stack-trace: 1.0.0-pre1
     dev: true
 
-  /@codspeed/core/1.0.2:
+  /@codspeed/core/1.0.2_wjyxl5ieabzzlyhpytaak4knku:
     resolution: {integrity: sha512-HgdGfHWdb9hs9931LPfKU50lCUax5U1tgPsHzEEOgWOrSyaCStMURrgJbd9jLqWp2QmccWkTjoR8zTjEabaZGw==}
     dependencies:
       node-gyp-build: 4.6.0
     dev: true
+    patched: true
 
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
