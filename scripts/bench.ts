@@ -21,7 +21,7 @@ async function main() {
 async function run(benchmarks: string[]) {
   for (const location of benchmarks) {
     await execa.command(
-      `node --hash-seed=1 --random-seed=1 --no-randomize-hashes --no-scavenge-task --no-opt --no-opt --predictable --predictable-gc-schedule -r esbuild-register ${location}`,
+      `node --hash-seed=1 --random-seed=1 --no-randomize-hashes --no-opt --predictable --predictable-gc-schedule -r esbuild-register ${location}`,
       {
         stdio: 'inherit',
       },
