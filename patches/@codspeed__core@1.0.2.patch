@@ -1,0 +1,185 @@
+diff --git a/dist/index.cjs.js b/dist/index.cjs.js
+index 78e2b19a173ad8ce3705109367bbb84830259331..d951afc6da30e999c1b7fd5dce6f4239346fe87e 100644
+--- a/dist/index.cjs.js
++++ b/dist/index.cjs.js
+@@ -1,6 +1,6 @@
+-'use strict';
++"use strict";
+ 
+-var path = require('path');
++var path = require("path");
+ 
+ var __defProp = Object.defineProperty;
+ var __defProps = Object.defineProperties;
+@@ -8,51 +8,58 @@ var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+ var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+ var __hasOwnProp = Object.prototype.hasOwnProperty;
+ var __propIsEnum = Object.prototype.propertyIsEnumerable;
+-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
++var __defNormalProp = (obj, key, value) =>
++  key in obj
++    ? __defProp(obj, key, {
++        enumerable: true,
++        configurable: true,
++        writable: true,
++        value,
++      })
++    : (obj[key] = value);
+ var __spreadValues = (a, b) => {
+   for (var prop in b || (b = {}))
+-    if (__hasOwnProp.call(b, prop))
+-      __defNormalProp(a, prop, b[prop]);
++    if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]);
+   if (__getOwnPropSymbols)
+     for (var prop of __getOwnPropSymbols(b)) {
+-      if (__propIsEnum.call(b, prop))
+-        __defNormalProp(a, prop, b[prop]);
++      if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]);
+     }
+   return a;
+ };
+ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+ let m;
+ try {
+-  m = __spreadProps(__spreadValues({}, require("node-gyp-build")(path.dirname(__dirname))), {
+-    isBound: true
+-  });
++  m = __spreadProps(
++    __spreadValues({}, require("node-gyp-build")(path.dirname(__dirname))),
++    {
++      isBound: true,
++    }
++  );
+ } catch (e) {
+   m = {
+     isInstrumented: () => false,
+-    startInstrumentation: () => {
+-    },
++    startInstrumentation: () => {},
+     // eslint-disable-next-line @typescript-eslint/no-unused-vars
+-    stopInstrumentation: (at) => {
+-    },
+-    isBound: false
++    stopInstrumentation: (at) => {},
++    isBound: false,
+   };
+ }
+ const measurement = m;
+ const initCore = () => {
+-  require("v8").setFlagsFromString("--allow-natives-syntax");
++  // require("v8").setFlagsFromString("--allow-natives-syntax");
+   measurement.stopInstrumentation(`Metadata: codspeed-node ${"1.0.1"}`);
+ };
+ const optimizeFunction = async (fn) => {
+-  await fn();
+-  await fn();
+-  eval("%OptimizeFunctionOnNextCall(fn)");
+-  await fn();
++  // await fn();
++  // await fn();
++  // eval("%OptimizeFunctionOnNextCall(fn)");
++  // await fn();
+ };
+ const optimizeFunctionSync = (fn) => {
+-  fn();
+-  fn();
+-  eval("%OptimizeFunctionOnNextCall(fn)");
+-  fn();
++  // fn();
++  // fn();
++  // eval("%OptimizeFunctionOnNextCall(fn)");
++  // fn();
+ };
+ 
+ exports.initCore = initCore;
+diff --git a/dist/index.es5.js b/dist/index.es5.js
+index 3f51812636d0354363dfb825c93ef9812c8c64f9..d7c5da013cf081410d18cdb790d1943cfda786b3 100644
+--- a/dist/index.es5.js
++++ b/dist/index.es5.js
+@@ -1,4 +1,4 @@
+-import path from 'path';
++import path from "path";
+ 
+ var __defProp = Object.defineProperty;
+ var __defProps = Object.defineProperties;
+@@ -6,51 +6,58 @@ var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+ var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+ var __hasOwnProp = Object.prototype.hasOwnProperty;
+ var __propIsEnum = Object.prototype.propertyIsEnumerable;
+-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
++var __defNormalProp = (obj, key, value) =>
++  key in obj
++    ? __defProp(obj, key, {
++        enumerable: true,
++        configurable: true,
++        writable: true,
++        value,
++      })
++    : (obj[key] = value);
+ var __spreadValues = (a, b) => {
+   for (var prop in b || (b = {}))
+-    if (__hasOwnProp.call(b, prop))
+-      __defNormalProp(a, prop, b[prop]);
++    if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]);
+   if (__getOwnPropSymbols)
+     for (var prop of __getOwnPropSymbols(b)) {
+-      if (__propIsEnum.call(b, prop))
+-        __defNormalProp(a, prop, b[prop]);
++      if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]);
+     }
+   return a;
+ };
+ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+ let m;
+ try {
+-  m = __spreadProps(__spreadValues({}, require("node-gyp-build")(path.dirname(__dirname))), {
+-    isBound: true
+-  });
++  m = __spreadProps(
++    __spreadValues({}, require("node-gyp-build")(path.dirname(__dirname))),
++    {
++      isBound: true,
++    }
++  );
+ } catch (e) {
+   m = {
+     isInstrumented: () => false,
+-    startInstrumentation: () => {
+-    },
++    startInstrumentation: () => {},
+     // eslint-disable-next-line @typescript-eslint/no-unused-vars
+-    stopInstrumentation: (at) => {
+-    },
+-    isBound: false
++    stopInstrumentation: (at) => {},
++    isBound: false,
+   };
+ }
+ const measurement = m;
+ const initCore = () => {
+-  require("v8").setFlagsFromString("--allow-natives-syntax");
++  // require("v8").setFlagsFromString("--allow-natives-syntax");
+   measurement.stopInstrumentation(`Metadata: codspeed-node ${"1.0.1"}`);
+ };
+ const optimizeFunction = async (fn) => {
+-  await fn();
+-  await fn();
+-  eval("%OptimizeFunctionOnNextCall(fn)");
+-  await fn();
++  // await fn();
++  // await fn();
++  // eval("%OptimizeFunctionOnNextCall(fn)");
++  // await fn();
+ };
+ const optimizeFunctionSync = (fn) => {
+-  fn();
+-  fn();
+-  eval("%OptimizeFunctionOnNextCall(fn)");
+-  fn();
++  // fn();
++  // fn();
++  // eval("%OptimizeFunctionOnNextCall(fn)");
++  // fn();
+ };
+ 
+ export { initCore, measurement, optimizeFunction, optimizeFunctionSync };

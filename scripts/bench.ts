@@ -20,9 +20,12 @@ async function main() {
 
 async function run(benchmarks: string[]) {
   for (const location of benchmarks) {
-    await execa.command(`node -r esbuild-register ${location}`, {
-      stdio: 'inherit',
-    })
+    await execa.command(
+      `node --hash-seed=1 --random-seed=1 --no-randomize-hashes --no-scavenge-task --predictable --predictable-gc-schedule -r esbuild-register ${location}`,
+      {
+        stdio: 'inherit',
+      },
+    )
   }
 }
 main().catch((e) => {
