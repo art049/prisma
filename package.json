@@ -24,7 +24,7 @@
     "check-engines-override": "node -r esbuild-register scripts/check-engines-override.ts",
     "format": "prettier --write .",
     "bench": "ts-node scripts/bench.ts | tee output.txt",
-    "bench-stdout-only": "ts-node scripts/bench.ts",
+    "bench-stdout-only": "node --predictable -r esbuild-register  scripts/bench.ts",
     "prepare": "is-ci || husky install"
   },
   "devDependencies": {
@@ -94,7 +94,8 @@
       }
     },
     "patchedDependencies": {
-      "node-fetch@2.6.7": "patches/node-fetch@2.6.7.patch"
+      "node-fetch@2.6.7": "patches/node-fetch@2.6.7.patch",
+      "@codspeed/core@1.0.2": "patches/@codspeed__core@1.0.2.patch"
     }
   },
   "lint-staged": {
